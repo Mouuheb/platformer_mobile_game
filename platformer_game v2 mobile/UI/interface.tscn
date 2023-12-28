@@ -1,0 +1,349 @@
+[gd_scene load_steps=9 format=3 uid="uid://bkyjb7fjnc1ej"]
+
+[ext_resource type="Script" path="res://UI/interface.gd" id="1_du4wv"]
+[ext_resource type="Texture2D" uid="uid://yl1okhjv17wq" path="res://tiles_packed.png" id="1_qdewv"]
+[ext_resource type="Texture2D" uid="uid://dqsj4uex2ufvm" path="res://ass/bazoka.png" id="2_bwbow"]
+[ext_resource type="Texture2D" uid="uid://pishgll0wfv7" path="res://UI/pause.png" id="3_ok3mb"]
+[ext_resource type="Texture2D" uid="uid://bkyuuhcws0gu8" path="res://controle/new btn/Annotation_2023-11-14_224609-removebg-preview.png" id="4_elqvx"]
+[ext_resource type="Texture2D" uid="uid://bihpucoa8rhv8" path="res://controle/new btn/Annotation_2023-11-14_224402-removebg-preview.png" id="5_d1vuj"]
+[ext_resource type="Texture2D" uid="uid://dtld2x65y5y8k" path="res://controle/new btn/Annotation_2023-11-14_224648-removebg-preview.png" id="6_fmclv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ja2fx"]
+size = Vector2(58.0002, 55.9999)
+
+[node name="interface" type="CanvasLayer"]
+script = ExtResource("1_du4wv")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -185.0
+offset_top = 12.0
+offset_right = 159.0
+offset_bottom = 206.0
+grow_horizontal = 0
+scale = Vector2(0.5, 0.5)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="VBoxContainer2"]
+layout_mode = 2
+patch_margin_top = 2
+
+[node name="one" type="Sprite2D" parent="VBoxContainer2/NinePatchRect"]
+position = Vector2(142, 24)
+scale = Vector2(3.5357, 3.45834)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(73.7826, 38.5673, 14.3238, 12.8374)
+
+[node name="bomb" type="Sprite2D" parent="VBoxContainer2/NinePatchRect"]
+position = Vector2(210, 81.9819)
+scale = Vector2(3.5357, 3.45834)
+texture = ExtResource("2_bwbow")
+region_enabled = true
+region_rect = Rect2(37.1339, 28.9452, 10.405, 13.6482)
+
+[node name="two" type="Sprite2D" parent="VBoxContainer2/NinePatchRect"]
+position = Vector2(90.0001, 25.9999)
+scale = Vector2(3.55357, 3.66666)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(73.7826, 38.5673, 14.3238, 12.8374)
+
+[node name="three" type="Sprite2D" parent="VBoxContainer2/NinePatchRect"]
+position = Vector2(38, 24)
+scale = Vector2(3.5357, 3.54167)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(73.7826, 38.5673, 14.3238, 12.8374)
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer2/NinePatchRect"]
+
+[node name="pause" type="Sprite2D" parent="VBoxContainer2/NinePatchRect/Area2D"]
+position = Vector2(206, 27.9998)
+scale = Vector2(3.5357, 3.45834)
+texture = ExtResource("3_ok3mb")
+region_enabled = true
+region_rect = Rect2(15.7826, 15.9184, 16.2157, 16.3508)
+
+[node name="contune" type="Sprite2D" parent="VBoxContainer2/NinePatchRect/Area2D"]
+position = Vector2(206, 27.9998)
+scale = Vector2(3.5357, 3.45834)
+texture = ExtResource("3_ok3mb")
+region_enabled = true
+region_rect = Rect2(32.0682, 31.7746, 16.2154, 16.4871)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer2/NinePatchRect/Area2D"]
+position = Vector2(207, 27.9948)
+shape = SubResource("RectangleShape2D_ja2fx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 27.001
+offset_top = -306.001
+offset_right = 135.001
+offset_bottom = -213.001
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+
+[node name="coins" type="NinePatchRect" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="coin" type="Sprite2D" parent="VBoxContainer/coins"]
+position = Vector2(76.6667, 76.6667)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(201.026, 128.918, 12.1618, 12.0266)
+
+[node name="key" type="Sprite2D" parent="VBoxContainer/coins"]
+position = Vector2(76.6666, 76.6667)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(126.269, 19.7021, 17.4319, 16.3508)
+
+[node name="coin_one" type="Sprite2D" parent="VBoxContainer/coins"]
+position = Vector2(35, 76.6667)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(21.9991, 146.567, 9.99966, 12.1617)
+
+[node name="coin_two" type="Sprite2D" parent="VBoxContainer/coins"]
+position = Vector2(35, 76.6667)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(39.9449, 146.729, 9.99966, 12.0266)
+
+[node name="coin_three" type="Sprite2D" parent="VBoxContainer/coins"]
+position = Vector2(35, 76.6667)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(57.9722, 146.837, 9.7294, 12.0266)
+
+[node name="coin_four" type="Sprite2D" parent="VBoxContainer/coins"]
+position = Vector2(35, 76.6667)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(75.8374, 146.81, 10.4051, 12.1618)
+
+[node name="coin_five" type="Sprite2D" parent="VBoxContainer/coins"]
+position = Vector2(35, 76.6667)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(93.8088, 146.972, 10.2699, 12.1618)
+
+[node name="coin_six" type="Sprite2D" parent="VBoxContainer/coins"]
+position = Vector2(35, 78.3333)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(111.891, 146.621, 10.2699, 12.7023)
+
+[node name="coin_seven" type="Sprite2D" parent="VBoxContainer/coins"]
+position = Vector2(35, 76.6667)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(129.837, 146.918, 10.4051, 12.1617)
+
+[node name="coin_eight" type="Sprite2D" parent="VBoxContainer/coins"]
+position = Vector2(35, 76.6667)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(147.864, 146.756, 10.2699, 12.1618)
+
+[node name="coin_nine" type="Sprite2D" parent="VBoxContainer/coins"]
+position = Vector2(35, 76.6667)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(166.053, 146.81, 9.99966, 12.2969)
+
+[node name="Label" type="Label" parent="VBoxContainer/coins"]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = 57.0
+offset_right = 28.0
+offset_bottom = 92.0
+grow_vertical = 2
+text = "0"
+
+[node name="Label2" type="Label" parent="VBoxContainer/coins"]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 31.6667
+offset_top = 56.6667
+offset_right = 57.6667
+offset_bottom = 91.6667
+grow_vertical = 2
+text = "/9"
+
+[node name="lvl" type="NinePatchRect" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="lvl" type="Label" parent="VBoxContainer/lvl"]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -48.3333
+offset_top = 9.33336
+offset_right = -8.33334
+offset_bottom = 35.3334
+grow_horizontal = 0
+grow_vertical = 2
+text = "1"
+
+[node name="dor" type="Sprite2D" parent="VBoxContainer/lvl"]
+position = Vector2(78.3342, 19.3333)
+scale = Vector2(2.20833, 2.22727)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(179.972, 102.783, 18.1075, 22.8371)
+
+[node name="lvl_one" type="Sprite2D" parent="VBoxContainer/lvl"]
+position = Vector2(40, 24.3333)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(21.9991, 146.567, 9.99966, 12.1617)
+
+[node name="lvl_two" type="Sprite2D" parent="VBoxContainer/lvl"]
+position = Vector2(40, 24.3333)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(39.9721, 146.837, 10.2699, 12.1618)
+
+[node name="lvl_three" type="Sprite2D" parent="VBoxContainer/lvl"]
+position = Vector2(40, 24.3333)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(57.5935, 146.567, 10.6753, 12.7023)
+
+[node name="lvl_four" type="Sprite2D" parent="VBoxContainer/lvl"]
+position = Vector2(40, 24.3333)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(75.7015, 146.837, 10.4051, 12.4321)
+
+[node name="lvl_five" type="Sprite2D" parent="VBoxContainer/lvl"]
+position = Vector2(40, 24.3333)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(93.8364, 146.864, 10.27, 12.1618)
+
+[node name="lvl_six" type="Sprite2D" parent="VBoxContainer/lvl"]
+position = Vector2(40, 24.3333)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(111.836, 146.851, 10.1348, 12.1618)
+
+[node name="lvl_seven" type="Sprite2D" parent="VBoxContainer/lvl"]
+position = Vector2(40, 24.3333)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(130.026, 146.919, 10.1348, 12.2969)
+
+[node name="lvl_eight" type="Sprite2D" parent="VBoxContainer/lvl"]
+position = Vector2(40, 24.3333)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(147.539, 146.783, 10.6754, 12.1618)
+
+[node name="lvl_nine" type="Sprite2D" parent="VBoxContainer/lvl"]
+position = Vector2(40, 24.3333)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(165.998, 146.54, 10.27, 12.7023)
+
+[node name="lvl_zero" type="Sprite2D" parent="VBoxContainer/lvl"]
+position = Vector2(40, 24.3333)
+scale = Vector2(3.47223, 3.30555)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(4.05282, 146.553, 10.2564, 12.7834)
+
+[node name="lvl_zero2" type="Sprite2D" parent="VBoxContainer/lvl"]
+visible = false
+position = Vector2(15, 29.3333)
+scale = Vector2(1.70139, 2.21528)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(3.70146, 146.626, 10.3623, 12.5647)
+
+[node name="lvl_one2" type="Sprite2D" parent="VBoxContainer/lvl"]
+visible = false
+position = Vector2(13.3333, 29.3333)
+scale = Vector2(1.70139, 2.21528)
+texture = ExtResource("1_qdewv")
+region_enabled = true
+region_rect = Rect2(21.9991, 146.567, 9.99966, 12.1617)
+
+[node name="right" type="TouchScreenButton" parent="."]
+position = Vector2(282, 473)
+rotation = 1.5708
+scale = Vector2(1, 1.029)
+texture_normal = ExtResource("4_elqvx")
+action = "ui_right"
+
+[node name="down" type="TouchScreenButton" parent="."]
+position = Vector2(1002, 641)
+rotation = 3.14159
+scale = Vector2(1, 1.029)
+texture_normal = ExtResource("4_elqvx")
+action = "ui_down"
+
+[node name="left" type="TouchScreenButton" parent="."]
+position = Vector2(2, 632)
+rotation = 4.71239
+texture_normal = ExtResource("4_elqvx")
+action = "ui_left"
+
+[node name="atac" type="TouchScreenButton" parent="."]
+position = Vector2(1123, 498)
+rotation = 1.5708
+scale = Vector2(0.917, 1)
+texture_normal = ExtResource("5_d1vuj")
+action = "shoot"
+
+[node name="jump" type="TouchScreenButton" parent="."]
+position = Vector2(1129, 345)
+rotation = 1.5708
+scale = Vector2(0.971, 1)
+texture_normal = ExtResource("6_fmclv")
+action = "ui_up"
+
+[node name="pause" type="TouchScreenButton" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1145, 3)
+rotation = 1.5708
+scale = Vector2(0.971, 1)
+texture_normal = ExtResource("6_fmclv")
+action = "pause"

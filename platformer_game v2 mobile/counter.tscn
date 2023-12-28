@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1p4bwlnjxj1j"]
+
+[ext_resource type="Texture2D" uid="uid://yl1okhjv17wq" path="res://tiles_packed.png" id="1_ts732"]
+
+[node name="counter" type="NinePatchRect"]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 87.0
+offset_bottom = 37.0
+region_rect = Rect2(8, 0, 8, 0)
+
+[node name="TilesPacked" type="Sprite2D" parent="."]
+position = Vector2(67.5, 19)
+scale = Vector2(2.83333, 2.66667)
+texture = ExtResource("1_ts732")
+region_enabled = true
+region_rect = Rect2(198, 126, 18, 18)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 6.0
+offset_right = -35.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"

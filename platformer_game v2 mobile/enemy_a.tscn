@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwcy81fkgy4sg"]
+
+[ext_resource type="Texture2D" uid="uid://yl1okhjv17wq" path="res://tiles_packed.png" id="1"]
+[ext_resource type="Script" path="res://enemy_a.gd" id="2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4omsi"]
+radius = 5.0846
+height = 16.0389
+
+[node name="enemy_a" type="Area2D" groups=["Damaj"]]
+script = ExtResource("2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1")
+region_enabled = true
+region_rect = Rect2(143, 62, 20, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+rotation = 1.55509
+shape = SubResource("CapsuleShape2D_4omsi")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-7.03353, 4.85, -7.03353, 2.0381, -6.03127, 2.0381, -6.00343, -0.0499399, -5.08469, -0.0220993, -4.97333, -1.97094, -2.99664, -2.05446, -3.02448, -0.0777805, -2.05006, -0.0220993, -1.99438, 1.95458, -0.992121, 1.98242, -0.992121, 4.96137)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2(8.04593, 0.0835214)
+polygon = PackedVector2Array(-7.03353, 4.85, -7.03353, 2.0381, -6.03127, 2.0381, -6.00343, -0.0499399, -5.08469, -0.0220993, -5.02901, -2.05446, -2.99664, -2.05446, -3.02448, -0.0777805, -2.05006, -0.0220993, -1.99438, 1.95458, -0.992121, 1.98242, -0.992121, 4.96137)
+
+[connection signal="body_entered" from="." to="." method="_on_enemy_a_body_entered"]

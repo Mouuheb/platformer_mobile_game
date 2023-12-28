@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bws8uyogqjwwl"]
+
+[ext_resource type="Texture2D" uid="uid://yl1okhjv17wq" path="res://tiles_packed.png" id="1_f3rdx"]
+
+[node name="tree_1" type="Sprite2D"]
+texture = ExtResource("1_f3rdx")
+region_enabled = true
+region_rect = Rect2(127.087, 107.854, 15.5605, 18.1938)

@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dd3umkw3p4day"]
+
+[ext_resource type="Script" path="res://sound/sound_player.gd" id="1_g0k3w"]
+[ext_resource type="AudioStream" uid="uid://barfhim73x63f" path="res://sound/laserSmall_004.ogg" id="2_4ye0q"]
+[ext_resource type="AudioStream" uid="uid://bv0ewunqpcu14" path="res://sound2/jump.wav" id="3_pt7hd"]
+[ext_resource type="AudioStream" uid="uid://by8osgmodk0wx" path="res://sound2/run.wav" id="4_fdy7d"]
+
+[node name="soundPlayer" type="Node"]
+script = ExtResource("1_g0k3w")
+
+[node name="AudioPlayers" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioPlayers"]
+stream = ExtResource("2_4ye0q")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="AudioPlayers"]
+stream = ExtResource("2_4ye0q")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="AudioPlayers"]
+stream = ExtResource("2_4ye0q")
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="AudioPlayers"]
+stream = ExtResource("2_4ye0q")
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="AudioPlayers"]
+stream = ExtResource("3_pt7hd")
+pitch_scale = 2.6
+mix_target = 1
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="AudioPlayers"]
+stream = ExtResource("4_fdy7d")
+bus = &"sound"

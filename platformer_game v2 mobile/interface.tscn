@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://brtah637v1leb"]
+
+[ext_resource type="PackedScene" uid="uid://4mgyapif022h" path="res://coin.tscn" id="1_0wyck"]
+[ext_resource type="PackedScene" uid="uid://cm2g2pdd0nshi" path="res://lvl_counter.tscn" id="2_okrtm"]
+[ext_resource type="PackedScene" uid="uid://bllnljrn8c71d" path="res://bar.tscn" id="3_1dyke"]
+
+[node name="interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_right = -3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 48.0
+offset_bottom = 78.0
+scale = Vector2(0.6, 0.6)
+
+[node name="coin" parent="VBoxContainer" instance=ExtResource("1_0wyck")]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Lvl_counter" parent="VBoxContainer" instance=ExtResource("2_okrtm")]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="brarr" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -187.0
+offset_top = 28.0
+offset_right = 253.0
+offset_bottom = 81.0
+grow_horizontal = 0
+scale = Vector2(0.35, 0.35)
+
+[node name="bar" parent="brarr" instance=ExtResource("3_1dyke")]
+layout_mode = 2

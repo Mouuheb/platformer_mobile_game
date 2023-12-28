@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://csapm8txt4fut"]
+
+[ext_resource type="Texture2D" uid="uid://yl1okhjv17wq" path="res://tiles_packed.png" id="1_rmx5x"]
+
+[node name="interfafe" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+offset_right = 89.0
+offset_bottom = 40.0
+texture = ExtResource("1_rmx5x")
+region_rect = Rect2(288.025, 126.026, 17.567, 17.567)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="NinePatchRect"]
+position = Vector2(72, 19)
+scale = Vector2(2.615, 2.5)
+texture = ExtResource("1_rmx5x")
+region_enabled = true
+region_rect = Rect2(200.674, 128.675, 12.5671, 12.432)

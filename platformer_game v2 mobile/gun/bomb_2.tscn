@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://babh5cskk575f"]
+
+[ext_resource type="Script" path="res://gun/bomb_2.gd" id="1_07uol"]
+[ext_resource type="Texture2D" uid="uid://dqsj4uex2ufvm" path="res://ass/bazoka.png" id="1_bfwjg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w80ih"]
+size = Vector2(10, 10)
+
+[node name="bomb2" type="CharacterBody2D" groups=["gun"]]
+script = ExtResource("1_07uol")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5, -5)
+scale = Vector2(1, 0.769231)
+texture = ExtResource("1_bfwjg")
+region_enabled = true
+region_rect = Rect2(36.9067, 28.8917, 10.5402, 13.5131)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, -5)
+shape = SubResource("RectangleShape2D_w80ih")

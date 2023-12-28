@@ -1,0 +1,233 @@
+[gd_scene load_steps=17 format=3 uid="uid://dd0pij74ucggv"]
+
+[ext_resource type="Script" path="res://lvl_3.gd" id="1_13mb5"]
+[ext_resource type="PackedScene" uid="uid://bb6vahm182sc5" path="res://parallax_background.tscn" id="1_38bde"]
+[ext_resource type="PackedScene" uid="uid://cfqlmegraaxqu" path="res://tile_map.tscn" id="2_cawhd"]
+[ext_resource type="PackedScene" uid="uid://dcok5vcl14fku" path="res://player/player.tscn" id="3_kvryv"]
+[ext_resource type="PackedScene" uid="uid://dusaorkx6fumi" path="res://dor.tscn" id="4_pmjhg"]
+[ext_resource type="PackedScene" uid="uid://cd2t0ofp5us4j" path="res://jump.tscn" id="5_uu8de"]
+[ext_resource type="PackedScene" uid="uid://beyly1x6n0tqi" path="res://enemy_c.tscn" id="6_vlqmh"]
+[ext_resource type="PackedScene" uid="uid://ctna87auxi1uf" path="res://enemy-b.tscn" id="7_8ntmi"]
+[ext_resource type="PackedScene" uid="uid://bwcy81fkgy4sg" path="res://enemy_a.tscn" id="8_f1e2j"]
+[ext_resource type="PackedScene" uid="uid://buqkypeg80tv7" path="res://tree_4.tscn" id="9_2n0o1"]
+[ext_resource type="PackedScene" uid="uid://owrb25q77a4p" path="res://tree_3.tscn" id="10_ing7h"]
+[ext_resource type="PackedScene" uid="uid://bgprt0gfadict" path="res://tree_2.tscn" id="11_kypyj"]
+[ext_resource type="PackedScene" uid="uid://bws8uyogqjwwl" path="res://tree_1.tscn" id="12_ishpf"]
+[ext_resource type="PackedScene" uid="uid://dmnpetr2ttihc" path="res://Area2D.tscn" id="13_m7rib"]
+[ext_resource type="PackedScene" uid="uid://cr7gfp1ag2w6l" path="res://coin2.tscn" id="14_n1t03"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mmrc3"]
+size = Vector2(1521.11, 948.876)
+
+[node name="lvl_3" type="Node2D"]
+script = ExtResource("1_13mb5")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_38bde")]
+
+[node name="TileMap" parent="." instance=ExtResource("2_cawhd")]
+position = Vector2(767, 334)
+layer_0/tile_data = PackedInt32Array(-196592, 65536, 0, -196591, 131072, 0, -196590, 196608, 0, -327665, 196608, 0, -327666, 65536, 0, -458739, 196608, 0, -458740, 65536, 0, -393206, 196608, 1, -393207, 131072, 1, -393208, 131072, 1, -393209, 131072, 1, -393210, 131072, 1, -393211, 131072, 1, -393212, 131072, 1, -393213, 131072, 1, -393214, 65536, 1, -327670, 196608, 6, -262134, 196608, 7, -327678, 65536, 6, -262142, 65536, 7, -327677, 131072, 6, -327676, 131072, 6, -327675, 131072, 6, -327674, 131072, 6, -327673, 131072, 6, -327672, 131072, 6, -327671, 131072, 6, -262141, 131072, 7, -262140, 131072, 7, -262139, 131072, 7, -262138, 131072, 7, -262137, 131072, 7, -262136, 131072, 7, -262135, 131072, 7, 393213, 65536, 0, 393214, 131072, 0, 393215, 131072, 0, 327680, 131072, 0, 327681, 131072, 0, 327682, 131072, 0, 327683, 131072, 0, 327684, 131072, 0, 327685, 131072, 0, 327686, 131072, 0, 327687, 131072, 0, 327688, 131072, 0, 327689, 131072, 0, 327690, 131072, 0, 327691, 131072, 0, 327692, 131072, 0, 327693, 131072, 0, 327694, 196608, 0, 589842, 196608, 0, 589841, 131072, 0, 589840, 131072, 0, 589839, 131072, 0, 589838, 131072, 0, 589837, 131072, 0, 589836, 131072, 0, 589835, 131072, 0, 589834, 131072, 0, 589833, 131072, 0, 589832, 131072, 0, 589831, 131072, 0, 589830, 131072, 0, 589829, 131072, 0, 589828, 131072, 0, 589827, 131072, 0, 589826, 131072, 0, 589825, 131072, 0, 589824, 131072, 0, 655359, 131072, 0, 655358, 131072, 0, 655357, 131072, 0, 655356, 131072, 0, 655355, 131072, 0, 655354, 131072, 0, 655353, 131072, 0, 655352, 131072, 0, 655351, 131072, 0, 655350, 131072, 0, 655349, 131072, 0, 655348, 131072, 0, 655347, 131072, 0, 655346, 131072, 0, 655345, 65536, 0, 458732, 65536, 0, 458733, 131072, 0, 458734, 196608, 0, 262129, 65536, 0, 262130, 131072, 0, 262131, 196608, 0, 65515, 65536, 0, 65516, 131072, 0, 65517, 196608, 0, -131088, 65536, 0, -131087, 131072, 0, -131086, 196608, 0, -327692, 65536, 0, -327691, 131072, 0, -327690, 196608, 0, -524296, 65536, 0, -524295, 131072, 0, -524294, 196608, 0, -786445, 65536, 0, -786444, 131072, 0, -786443, 196608, 0, -1114119, 65536, 1, -1114118, 131072, 1, -1114117, 131072, 1, -1114116, 131072, 1, -1114115, 131072, 1, -1114114, 131072, 1, -1114113, 131072, 1, -1179648, 131072, 1, -1179647, 131072, 1, -1179646, 131072, 1, -1179645, 131072, 1, -1179644, 131072, 1, -1179643, 131072, 1, -1179642, 131072, 1, -1179641, 131072, 1, -1179640, 131072, 1, -1179639, 131072, 1, -1179638, 131072, 1, -1179637, 131072, 1, -1179636, 131072, 1, -1179635, 131072, 1, -1179634, 131072, 1, -1179633, 131072, 1, -1179632, 131072, 1, -1179631, 131072, 1, -1179630, 131072, 1, -1179629, 131072, 1, -1179628, 131072, 1, -1179627, 131072, 1, -1179626, 131072, 1, -1179625, 131072, 1, -1179624, 131072, 1, -1179623, 131072, 1, -1048583, 65536, 7, -1048582, 131072, 7, -1048581, 131072, 7, -1048580, 131072, 7, -1048579, 131072, 7, -1048578, 131072, 7, -1048577, 131072, 7, -1114112, 131072, 7, -1114111, 131072, 7, -1114110, 131072, 7, -1114109, 131072, 7, -1114108, 131072, 7, -1114107, 131072, 7, -1114106, 131072, 7, -1114105, 131072, 7, -1114104, 131072, 7, -1114103, 131072, 7, -1114102, 131072, 7, -1114101, 131072, 7, -1114100, 131072, 7, -1114099, 131072, 7, -1114098, 131072, 7, -1114097, 131072, 7, -1114096, 131072, 7, -1114095, 131072, 7, -1114094, 131072, 7, -1114093, 131072, 7, -1114092, 131072, 7, -1114091, 131072, 7, -1114090, 131072, 7, -1114089, 131072, 7, -1114088, 131072, 7, -1114087, 131072, 7, -1114086, 196608, 7, -1179622, 196608, 1, -720870, 524288, 2, -720869, 589824, 2, -720868, 589824, 2, -720867, 589824, 2, -720866, 589824, 2, -720865, 589824, 2, -720864, 589824, 2, -720863, 589824, 2, -720862, 655360, 2, 327677, 458752, 2, 262141, 458752, 2, 196605, 458752, 2, 131069, 458752, 2, 65533, 458752, 2, -3, 524288, 2, -65539, 458752, 2, -131075, 458752, 2, -196611, 458752, 2, -262147, 458752, 2, -327683, 458752, 2, -458755, 458752, 2, -393219, 458752, 2, -524291, 458752, 2, -589827, 458752, 2, -655363, 458752, 2, -720899, 458752, 2, -786435, 458752, 2, -851971, 458752, 2, -917507, 458752, 2, -983043, 458752, 2, 262156, 524288, 2, 262157, 589824, 2, 262158, 655360, 2, -2, 655360, 2, 589817, 1114112, 6, 524281, 1048576, 6, 458745, 1114112, 4, 458744, 1114112, 2, 458746, 1245184, 2, 393211, 1245184, 2, 393207, 1114112, 2, 262135, 1114112, 0, 196600, 1114112, 0, 196602, 1245184, 0, 262139, 1245184, 0, 327671, 1114112, 1, 196601, 1179648, 0, 327675, 1245184, 1, 262138, 1179648, 1, 262137, 1179648, 1, 262136, 1179648, 1, 327672, 1179648, 1, 393208, 1179648, 1, 393210, 1179648, 1, 393209, 1179648, 1, 327673, 1179648, 1, 327674, 1179648, 1, 524280, 1179648, 4, 589820, 589824, 6, -1245173, 1114112, 6, -1310709, 1114112, 4, -1310708, 1245184, 2, -1310710, 1114112, 2, -1376244, 1245184, 0, -1376245, 1179648, 0, -1376246, 1114112, 0, -262128, 458752, 4, -458749, 393216, 4, -65538, 524288, 4, 196622, 393216, 4, 524289, 458752, 4, 589809, 393216, 4, -1179654, 524288, 4, -1245158, 393216, 4, -786406, 524288, 4, -393230, 0, 0)
+
+[node name="player" parent="." instance=ExtResource("3_kvryv")]
+position = Vector2(1092.86, 265.233)
+
+[node name="dor" parent="." instance=ExtResource("4_pmjhg")]
+position = Vector2(1365.44, 123.105)
+target_lvl_path = "res://lvl_4.tscn"
+
+[node name="jump" parent="." instance=ExtResource("5_uu8de")]
+position = Vector2(549.129, 91.6856)
+
+[node name="enemy_c" parent="." instance=ExtResource("6_vlqmh")]
+position = Vector2(638.604, 166.287)
+
+[node name="enemy_c2" parent="." instance=ExtResource("6_vlqmh")]
+position = Vector2(567.217, 220.686)
+
+[node name="enemy_c3" parent="." instance=ExtResource("6_vlqmh")]
+position = Vector2(498.914, 274.527)
+
+[node name="enemy_c4" parent="." instance=ExtResource("6_vlqmh")]
+position = Vector2(889.322, 212.461)
+
+[node name="enemy_c5" parent="." instance=ExtResource("6_vlqmh")]
+position = Vector2(823.583, 491.96)
+
+[node name="enemy_c6" parent="." instance=ExtResource("6_vlqmh")]
+position = Vector2(758.067, 491.96)
+
+[node name="enemy-b" parent="." instance=ExtResource("7_8ntmi")]
+position = Vector2(840.636, 414.021)
+
+[node name="enemy_a" parent="." instance=ExtResource("8_f1e2j")]
+position = Vector2(948.901, 419.04)
+
+[node name="enemy_a2" parent="." instance=ExtResource("8_f1e2j")]
+position = Vector2(1281.56, 131.576)
+
+[node name="enemy_a3" parent="." instance=ExtResource("8_f1e2j")]
+position = Vector2(1069.11, 5.09426)
+
+[node name="enemy_a4" parent="." instance=ExtResource("8_f1e2j")]
+position = Vector2(839.105, 5.23074)
+
+[node name="enemy_a5" parent="." instance=ExtResource("8_f1e2j")]
+position = Vector2(1086.05, 491.042)
+
+[node name="enemy_a6" parent="." instance=ExtResource("8_f1e2j")]
+position = Vector2(599.636, 491.312)
+
+[node name="enemy_a7" parent="." instance=ExtResource("8_f1e2j")]
+position = Vector2(865.723, 221.296)
+
+[node name="tree_4" parent="." instance=ExtResource("9_2n0o1")]
+position = Vector2(969.613, 415.62)
+
+[node name="tree_3" parent="." instance=ExtResource("10_ing7h")]
+position = Vector2(1043.93, 237.676)
+
+[node name="tree_5" parent="." instance=ExtResource("10_ing7h")]
+position = Vector2(1008.55, 399.858)
+
+[node name="tree_2" parent="." instance=ExtResource("11_kypyj")]
+position = Vector2(452.563, 433.237)
+
+[node name="tree_6" parent="." instance=ExtResource("11_kypyj")]
+position = Vector2(515.331, 379.502)
+
+[node name="tree_7" parent="." instance=ExtResource("11_kypyj")]
+position = Vector2(428.064, 325.308)
+
+[node name="tree_8" parent="." instance=ExtResource("11_kypyj")]
+position = Vector2(891.526, 487.962)
+
+[node name="tree_9" parent="." instance=ExtResource("11_kypyj")]
+position = Vector2(1016.56, 2.07573)
+
+[node name="tree_10" parent="." instance=ExtResource("11_kypyj")]
+position = Vector2(1192.21, 1.79511)
+
+[node name="tree_1" parent="." instance=ExtResource("12_ishpf")]
+position = Vector2(779.963, 487.215)
+
+[node name="tree_11" parent="." instance=ExtResource("12_ishpf")]
+position = Vector2(556.226, 488.028)
+
+[node name="tree_12" parent="." instance=ExtResource("12_ishpf")]
+position = Vector2(783.255, 415.094)
+
+[node name="tree_13" parent="." instance=ExtResource("12_ishpf")]
+position = Vector2(933.803, 216.985)
+
+[node name="tree_14" parent="." instance=ExtResource("12_ishpf")]
+position = Vector2(1071.74, 271.044)
+
+[node name="tree_15" parent="." instance=ExtResource("11_kypyj")]
+position = Vector2(996.541, 199.632)
+
+[node name="tree_16" parent="." instance=ExtResource("9_2n0o1")]
+position = Vector2(834.024, 217.319)
+
+[node name="tree_17" parent="." instance=ExtResource("9_2n0o1")]
+position = Vector2(669.505, 487.957)
+
+[node name="tree_18" parent="." instance=ExtResource("10_ing7h")]
+position = Vector2(739.824, 309.638)
+
+[node name="tree_19" parent="." instance=ExtResource("10_ing7h")]
+position = Vector2(592.964, 219.684)
+
+[node name="tree_20" parent="." instance=ExtResource("10_ing7h")]
+position = Vector2(667.132, 165.672)
+
+[node name="tree_21" parent="." instance=ExtResource("9_2n0o1")]
+position = Vector2(798.855, 1.65864)
+
+[node name="tree_22" parent="." instance=ExtResource("10_ing7h")]
+position = Vector2(1099.39, 4.18417)
+
+[node name="tree_23" parent="." instance=ExtResource("12_ishpf")]
+position = Vector2(937.595, 0.95327)
+
+[node name="tree_24" parent="." instance=ExtResource("11_kypyj")]
+position = Vector2(989.866, 488.281)
+
+[node name="tree_25" parent="." instance=ExtResource("9_2n0o1")]
+position = Vector2(862.161, 487.621)
+
+[node name="tree_26" parent="." instance=ExtResource("10_ing7h")]
+position = Vector2(916.894, 490.069)
+
+[node name="tree_27" parent="." instance=ExtResource("9_2n0o1")]
+position = Vector2(403.872, 325.641)
+
+[node name="tree_28" parent="." instance=ExtResource("10_ing7h")]
+position = Vector2(545.198, 381.661)
+
+[node name="tree_29" parent="." instance=ExtResource("10_ing7h")]
+position = Vector2(428.147, 435.84)
+
+[node name="tree_30" parent="." instance=ExtResource("12_ishpf")]
+position = Vector2(731.583, 0.92836)
+
+[node name="tree_31" parent="." instance=ExtResource("10_ing7h")]
+position = Vector2(1319.89, 129.875)
+
+[node name="tree_32" parent="." instance=ExtResource("10_ing7h")]
+position = Vector2(1341.76, 130.209)
+
+[node name="tree_33" parent="." instance=ExtResource("10_ing7h")]
+position = Vector2(580.228, 94.0547)
+
+[node name="tree_34" parent="." instance=ExtResource("12_ishpf")]
+position = Vector2(516.887, 271.445)
+
+[node name="cheak" parent="." instance=ExtResource("13_m7rib")]
+position = Vector2(957.642, 216.945)
+
+[node name="cheak2" parent="." instance=ExtResource("13_m7rib")]
+position = Vector2(998.916, 397.12)
+
+[node name="cheak3" parent="." instance=ExtResource("13_m7rib")]
+position = Vector2(533.602, 487.486)
+
+[node name="cheak4" parent="." instance=ExtResource("13_m7rib")]
+position = Vector2(570.414, 91.0389)
+
+[node name="cheak5" parent="." instance=ExtResource("13_m7rib")]
+position = Vector2(1155.57, 1.39256)
+
+[node name="coin" parent="." instance=ExtResource("14_n1t03")]
+position = Vector2(752.07, 413.861)
+
+[node name="coin2" parent="." instance=ExtResource("14_n1t03")]
+position = Vector2(910.805, 213.982)
+
+[node name="coin3" parent="." instance=ExtResource("14_n1t03")]
+position = Vector2(891.928, 412.195)
+
+[node name="coin4" parent="." instance=ExtResource("14_n1t03")]
+position = Vector2(1052.39, 482.042)
+
+[node name="coin5" parent="." instance=ExtResource("14_n1t03")]
+position = Vector2(729.581, 485.817)
+
+[node name="coin6" parent="." instance=ExtResource("14_n1t03")]
+position = Vector2(414.327, 429.185)
+
+[node name="coin7" parent="." instance=ExtResource("14_n1t03")]
+position = Vector2(529.48, 380.103)
+
+[node name="coin8" parent="." instance=ExtResource("14_n1t03")]
+position = Vector2(523.817, 196.992)
+
+[node name="coin9" parent="." instance=ExtResource("14_n1t03")]
+position = Vector2(1220.4, -6.88504)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(750.554, 464.438)
+shape = SubResource("RectangleShape2D_mmrc3")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
